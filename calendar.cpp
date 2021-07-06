@@ -17,19 +17,18 @@ int main()
    	if((year%4==0&&year%100!=0)||year%400==0)
 	monthDay[1]=29;
    	startingDay=get_1st_weekday(year);
-   for(month=0;month<12;month++)
-   {
-   		
-	 	daysInMonth=monthDay[month];
-      	printf("\n\n---------------%s-------------------\n",months[month]);
-      	printf("\n  Sun  Mon  Tue  Wed  Thurs  Fri  Sat\n");
-      	for(weekDay=0;weekDay<startingDay;weekDay++)
-        printf("     ");
-		for(day=1;day<=daysInMonth;day++)
-		{
+   	for(month=0;month<12;month++)
+   	{
+   		daysInMonth=monthDay[month];
+      		printf("\n\n---------------%s-------------------\n",months[month]);
+      		printf("\n  Sun  Mon  Tue  Wed  Thurs  Fri  Sat\n");
+      		for(weekDay=0;weekDay<startingDay;weekDay++)
+        	printf("     ");
+	for(day=1;day<=daysInMonth;day++)
+	{
         	printf("%5d",day);
         	if(++weekDay>6)
-			{
+		{
         	printf("\n");
         	weekDay=0;
         	}
